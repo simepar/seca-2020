@@ -1,0 +1,55 @@
+<html>
+<head><meta charset="utf-8" >
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+  <title>Monitoramento Emergencial</title>
+  <style>/*Importar o google fonte para o seu projeto*/
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+</style>
+</head>
+<body>
+    <div class="Cabecalho">
+      <h1>Monitoramento Hidrometeorológico da Crise Hídrica no PR - 2020</h1>
+      <img src="logo_01.png" alt="logo" style="width:720px;height:126px;" />
+
+      <p>Plataforma Web contendo o monitoramento hidrometeorológico realizado em conjunto pelo Simepar (Sistema de Tecnologia e Monitoramento Ambiental do Paraná)
+        e IAT (Instituto Água e Terra), com a colaboração da Sanepar (Companhia de Saneamento do Paraná)
+        </p>
+      <hr>
+    </div>
+
+    <div class="bannerLinks" >
+
+        <a href="SANEPAR SECA.html" target="_blank" rel="nofollow">
+
+          <img src="Icone 1.jpeg" alt="Icone 1" style="width:100px;height:100px;" >
+          <span>
+            <strong>Visualização Espacial</strong>
+
+            <span><p>WebSIG dos mananciais contendo os polígonos das bacias dos mananciais críticos e os postos fluviométricos representativos.</p></span>
+          </span>
+        </a>
+        <a href="Analise Seca.html" target="_blank" rel="nofollow">
+          <img src="Icone 2.jpeg" alt="Icone 2" style="width:100px;height:100px;"  >
+          <span>
+            <strong>Gráficos de Anomalias</strong>
+            <span><p>Visualização gráfica das anomalias de precipitação nas bacias e de cota fluviométrica nos postos representativos.</p></span>
+          </span>
+        </a>
+        <a href="Download.html" target="_blank" rel="nofollow">
+          <img src="Icone 3.jpeg" alt="Icone 3" style="width:100px;height:100px;"  >
+          <span>
+            <strong>Download de Dados e Demais Informações</strong>
+            <span><p>Página para o download dos valores numéricos e do memorial descritivo contendo os métodos empregados na análise.</p></span>
+          </span>
+        </a>
+      </div>
+
+</body>
+
+<footer>
+  <hr>
+  <p>Desenvolvimento - SIMEPAR: Gabriel B. (Estagiário de Engenharia), Arlan S. (Eng. Hidrólogo - Pesquisador), André C. (Mestrando) e Eduardo A. (Diretor-Presidente)</p>
+</footer>
+
+
+</html>

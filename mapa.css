@@ -1,0 +1,31 @@
+body{
+
+
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', endColorstr='#236d8b', GradientType=0 );
+  font-family: 'Arimo', sans-serif;/*Fonte vinda do google fonte*/
+
+
+}
+h1{
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 100%;
+text-align: center;
+}
+.Cabecalho img{
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 100%;
+
+}
+
+.Cabecalho p{
+  font-size: 16px;
+
+}

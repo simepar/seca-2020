@@ -1,0 +1,146 @@
+body{
+  position: absolute;
+  margin-right:  3%;
+  margin-left:   3%;
+  margin-bottom:   3%;
+  margin-top: 3%;
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', endColorstr='#236d8b', GradientType=0 );
+  font-family: 'Arimo', sans-serif;/*Fonte vinda do google fonte*/
+
+
+}
+.sidenav p{
+  font-size: 16px;
+ padding: 6px 8px 6px 16px;
+ text-align:left;
+}
+.sidenav {
+  width: 13%;
+  position: fixed;
+  z-index: 1;
+  bottom: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+
+
+h1{
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 100%;
+text-align: center;
+}
+img{
+padding: 20px 2%;
+transition: 0.5s all;
+align: center;
+transition: 0.5s all;
+position: relative;
+left:0%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.Cabecalho img{
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 30%;
+
+}
+
+.Cabecalho p{
+  font-size: 16px;
+
+}
+.grafico{
+  display: block;
+  margin-top: 15px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 40%;
+
+}
+.bannerLinks{
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
+.bannerLinks a {
+     float:left;
+     width:20%;
+     height:380px;
+     margin: 3%;
+     border:solid Black ;
+     text-decoration: none;
+     padding: 20px 2%;
+     background: white;
+     transition: 0.5s all;
+     text-align: center;
+     line-height: 2;
+     border-radius:20px;
+ }
+.bannerLinks a:hover{
+  background-color: Moccasin;
+}
+.bannerLinks a strong { display: block; font-size: 100%; border-bottom: 1px solid #000405; padding: 0 5px;line-height:22px;}
+.bannerLinks a > span {  display: inline-block;}
+.bannerLinks a > span > span { color: #333; line-height: 100%; padding: 10px 5px}
+.bannerLinks a > span > span > p{height: 40%; width: 70%; font-size: auto;line-height:100%; text-align: center; margin-left: auto; margin-right: auto;}
+footer{
+  float: none;
+  display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 60%;
+}
+
+.mybutton{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+
+  width: 40%;
+
+  background-color: white; /* Green */
+  border: solid black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+
+  font-size: 24px;
+
+}
+
+.mybutton:hover{
+  background-color: Moccasin;
+}
