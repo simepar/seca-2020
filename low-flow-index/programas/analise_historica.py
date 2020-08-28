@@ -5,7 +5,7 @@ import pandas as pd
 import datetime as dt
 import numpy as np
 from scipy.stats import gamma, expon
-postos = [  'uniao_da_vitoria',
+postos = [  'uniao_da_vitoria'
             'rio_negro',
             'porto_amazonas',
             'sao_mateus_do_sul'
@@ -104,16 +104,19 @@ for posto in postos:
     df_eventos.to_excel('../dados-saida/{}.xlsx'.format(posto))
 
     # 10 - Ajuste de distribuicoes
-    vars = df_eventos['D'].astype('float') # variaveis aleatorias - deficits
+    # rv - random variable - deficits
+    # fd - frozen distribution
+    rv = df_eventos['D'].astype('float')
     # 10.1 - Exponencial
-    location, scale = expon.fit(x)
+    params = expon.fit(rv)
+    fd = expon(loc=params[0], scale=params[1])
     df_eventos['Pexpon(<=Dobs)'] = df_eventos.apply(lambda x:
-        expon.cdf(x['D'], location, scale), axis=1)
+        fd.cdf(x['D']), axis=1)
     # 10.2 - Gama
-    params = gamma.fit(x)
-    rv = gamma(params[0], loc=params[1], scale=params[2])
+    params = gamma.fit(rv)
+    fd = gamma(params[0], loc=params[1], scale=params[2])
     df_eventos['Pgama(<=Dobs)'] = df_eventos.apply(lambda x:
-        rv.cdf(x['D']), axis=1)
+        fd.cdf(x['D']), axis=1)
 
     # 11 - Exporta os resultados
     df_eventos.to_excel('../dados-saida/{}.xlsx'.format(posto))
