@@ -30,3 +30,15 @@ for t in pd.date_range(dt.datetime(1900,1,1), dt.datetime(1900,12,31)):
     df_percentis.loc[t.dayofyear,:] = [t.day, t.month, Q84, Q90, Q95, Q99]
 
 df_percentis.to_excel('df_percentis.xlsx')
+
+
+# 4 - Deficit
+DF = pd.DataFrame()
+DF['Q_t'] = srq
+def busca_thresh(mes, dia):
+    if (mes==2) & (dia==29):
+        dia = 28
+    thresh = df_percentis.loc[(df_percentis.mes==mes) & (df_percentis.dia==dia)\
+                ,'Q95'].values[0]
+    return thresh
+DF['Thresh'] = DF.apply(lambda row: busca_thresh(row.name.month, row.name.day), axis=1)
