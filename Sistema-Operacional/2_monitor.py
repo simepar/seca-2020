@@ -15,7 +15,7 @@ idx = pd.to_datetime([])
 ANC_mes = pd.DataFrame(index=idx)
 arqs = glob.glob('Saidas/Dados-Postos/*')
 for arq in arqs:
-    #arq=arq.replace('\\','/') 
+    arq=arq.replace('\\','/') 
     posto_codigo  = arq.split('/')[2].split('_')[0]
     sr_anomalia   = pd.read_excel(arq, index_col='data')['anomalia'].rename(posto_codigo)
     ANC_mes = pd.concat([ANC_mes, sr_anomalia], axis=1)
