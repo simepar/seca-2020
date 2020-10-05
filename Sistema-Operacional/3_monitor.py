@@ -10,7 +10,7 @@ MANANCIAIS_SANEPAR = pd.read_excel('MANANCIAIS_SANEPAR_v_ago_2020.xlsx', skiprow
 ## 2 - Plota um .png para cada manancial
 sns.set()
 for SIA in MANANCIAIS_SANEPAR.index:
-
+#for SIA in [19]:
     if SIA == 206:
         continue
     if SIA == 377:
@@ -29,10 +29,12 @@ for SIA in MANANCIAIS_SANEPAR.index:
     fig.suptitle(titulo, fontsize=18, fontweight='bold')
     fig.set_size_inches(14, 18) # pixels/meu
     # Coleta as anomalias
-    #AN_MES = pd.read_excel('Saidas/Monitoramento - Todos os Mananciais.xlsx', sheet_name='SIA{}_Mes'.format(SIA), index_col='DATA')
-    AN_MES = pd.read_excel('Saidas/Monitoramento - Todos os Mananciais.xlsx', sheet_name='SIA{}_Mes'.format(SIA))
-    AN_MES.index=AN_MES['DATA'].fillna(dt.datetime(2020,9,30))
-    AN_MES=AN_MES.drop('DATA',axis=1)
+    AN_MES = pd.read_excel('Saidas/Monitoramento - Todos os Mananciais.xlsx', sheet_name='SIA{}_Mes'.format(SIA), index_col='DATA')
+    # AN_MES = pd.read_excel('Saidas/Monitoramento - Todos os Mananciais.xlsx', sheet_name='SIA{}_Mes'.format(SIA))
+    # AN_MES.index=AN_MES['DATA'].fillna(dt.datetime(2020,9,30))
+    # AN_MES=AN_MES.fillna(0)
+    # AN_MES=AN_MES.groupby(AN_MES.index).sum()
+    #AN_MES=AN_MES.drop('DATA',axis=1)
     # Plota
     axs[0].plot(AN_MES['AN_PREC_MENSAL_%']    ,'o-', label='Mensal', color='Red')
     axs[0].plot(AN_MES['AN_PREC_TRIMESTRAL_%'],'o-', label='Trimestral', color='Orange')
