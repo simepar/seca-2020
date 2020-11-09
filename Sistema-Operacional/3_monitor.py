@@ -31,7 +31,7 @@ for SIA in MANANCIAIS_SANEPAR.index:
     # Coleta as anomalias
     #AN_MES = pd.read_excel('Saidas/Monitoramento - Todos os Mananciais.xlsx', sheet_name='SIA{}_Mes'.format(SIA), index_col='DATA')
     AN_MES = pd.read_excel('Saidas/Monitoramento - Todos os Mananciais.xlsx', sheet_name='SIA{}_Mes'.format(SIA))
-    AN_MES.index=AN_MES['DATA'].fillna(dt.datetime(2020,9,30))
+    AN_MES.index=AN_MES['DATA'].fillna(dt.datetime(2020,10,31))
     AN_MES=AN_MES.fillna(0)
     AN_MES=AN_MES.groupby(AN_MES.index).sum()
     #AN_MES=AN_MES.drop('DATA',axis=1)
