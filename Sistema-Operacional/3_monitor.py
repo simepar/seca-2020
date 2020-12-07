@@ -30,6 +30,7 @@ for SIA in MANANCIAIS_SANEPAR.index:
     fig.set_size_inches(14, 18) # pixels/meu
     # Coleta as anomalias
     AN_MES = pd.read_excel('Saidas/Monitoramento - Todos os Mananciais.xlsx', sheet_name='SIA{}_Mes'.format(SIA), index_col='DATA')
+    AN_MES.index=pd.to_datetime(AN_MES.index)
     #AN_MES = pd.read_excel('Saidas/Monitoramento - Todos os Mananciais.xlsx', sheet_name='SIA{}_Mes'.format(SIA))
     #AN_MES.index=AN_MES['DATA'].fillna(dt.datetime(2020,10,31))
     #AN_MES=AN_MES.fillna(0)
