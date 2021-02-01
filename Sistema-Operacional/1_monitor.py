@@ -27,7 +27,7 @@ def resampler_arlan(X):
 ### PARTE I - PROCESSAMENTO E COLETA DAS SERIES TELEMETRICAS ###
 ## 1 - Obtem a datahora de disparo
 # dhdisp = dt.datetime.now() 2021-01-15
-dhdisp = dt.datetime(2021,1,16,12) # tem que ser 1 dia depois do fechamento!
+dhdisp = dt.datetime(2021,2,1,12) # tem que ser 1 dia depois do fechamento!
 
 ## 2 - Coleta o vinculo SIA do manancial <-> Codigo do posto telemetrico
 MANANCIAIS_SANEPAR = pd.read_excel('MANANCIAIS_SANEPAR_v_ago_2020.xlsx', \
