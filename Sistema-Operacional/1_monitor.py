@@ -2,7 +2,7 @@ import pandas as pd, numpy as np, datetime as dt
 import glob
 from dateutil.relativedelta import relativedelta
 from f_coleta_op_banco_Simepar import f_coleta_op_banco_Simepar
-from f_coleta_op_telemetria_SNIRH import f_coleta_op_telemetria_SNIRH
+from f_coleta_op_telemetria_SNIRH import f_coleta_op_telemetria_SNIRH2
 
 
 ### Funcoes ###
@@ -27,7 +27,7 @@ def resampler_arlan(X):
 ### PARTE I - PROCESSAMENTO E COLETA DAS SERIES TELEMETRICAS ###
 ## 1 - Obtem a datahora de disparo
 # dhdisp = dt.datetime.now() 2021-01-15
-dhdisp = dt.datetime(2021,2,1,12) # tem que ser 1 dia depois do fechamento!
+dhdisp = dt.datetime(2021,2,16,12) # tem que ser 1 dia depois do fechamento!
 
 ## 2 - Coleta o vinculo SIA do manancial <-> Codigo do posto telemetrico
 MANANCIAIS_SANEPAR = pd.read_excel('MANANCIAIS_SANEPAR_v_ago_2020.xlsx', \
@@ -59,7 +59,7 @@ for posto_codigo in postos.index:
     t_fim_UTC = t_fim_BRT + dt.timedelta(hours=3)
     # Executa a coleta do SNIRH ou do Simepar, a depender do orgao vinculado
     if posto_quem == 'snirh':
-        srh_bruta = f_coleta_op_telemetria_SNIRH(t_ini_UTC, t_fim_UTC, posto_nome, posto_codigo)
+        srh_bruta = f_coleta_op_telemetria_SNIRH2(t_ini_UTC, t_fim_UTC, posto_nome, posto_codigo)
     elif posto_quem == 'simepar':
         srh_bruta = f_coleta_op_banco_Simepar(t_ini_UTC, t_fim_UTC, posto_nome, posto_codigo) # Retorna na frequencia de 1hr
     else:
